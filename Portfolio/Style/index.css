@@ -1,0 +1,109 @@
+Now let me create all the frontend components in parallel:
+Action: file_editor create /app/frontend/src/index.css --file-text "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 2%;
+    --foreground: 220 14% 96%;
+    --card: 222 47% 4%;
+    --card-foreground: 220 14% 96%;
+    --popover: 222 47% 4%;
+    --popover-foreground: 220 14% 96%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 258 90% 66%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 33% 12%;
+    --muted-foreground: 218 11% 65%;
+    --accent: 217 33% 12%;
+    --accent-foreground: 220 14% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 33% 12%;
+    --input: 217 33% 12%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 258 90% 66%;
+    --chart-3: 187 92% 53%;
+    --chart-4: 228 100% 82%;
+    --chart-5: 218 11% 65%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+@layer base {
+  [data-debug-wrapper=\"true\"] {
+    display: contents !important;
+  }
+  [data-debug-wrapper=\"true\"] > * {
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    column-gap: inherit;
+    row-gap: inherit;
+    gap: inherit;
+    border-left-width: inherit;
+    border-right-width: inherit;
+    border-top-width: inherit;
+    border-bottom-width: inherit;
+    border-left-style: inherit;
+    border-right-style: inherit;
+    border-top-style: inherit;
+    border-bottom-style: inherit;
+    border-left-color: inherit;
+    border-right-color: inherit;
+    border-top-color: inherit;
+    border-bottom-color: inherit;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0B1120, #111827);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #E5E7EB;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+"
+Observation: Overwrite successful: /app/frontend/src/index.css
